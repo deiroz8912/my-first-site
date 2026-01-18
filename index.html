@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Отдел социальной защиты</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<!-- Модальное окно заявки -->
+<div id="modal" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <h2 id="modal-title">Оставить заявку</h2>
+    <p id="modal-description"></p>
+
+    <form id="application-form">
+      <label for="fullname">ФИО *</label>
+      <input type="text" id="fullname" required>
+
+      <label for="phone">Телефон *</label>
+      <input type="tel" id="phone" required>
+
+      <label for="email">Email</label>
+      <input type="email" id="email">
+
+      <label for="comment">Комментарий</label>
+      <textarea id="comment" rows="3"></textarea>
+
+      <button type="submit">Отправить заявку</button>
+    </form>
+  </div>
+</div>
+<body>
+
+<!-- Навбар -->
+<nav class="navbar">
+  <div class="container">
+    <div class="logo">СоцЗащита Волгоград</div>
+    <div class="menu">
+      <ul>
+        <li><a href="#about">О сайте</a></li>
+        <li><a href="#benefits">Преимущества</a></li>
+        <li class="dropdown">
+          <a href="#" class="dropbtn">Услуги ▼</a>
+          <div class="dropdown-content">
+            <a href="#services">Все услуги</a>
+            <a href="#service1">Пособия</a>
+            <a href="#service2">Льготы ЖКХ</a>
+            <a href="#service3">Сопровождение</a>
+          </div>
+        </li>
+        <li><a href="#news">Новости</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Hero-заголовок с фоновым изображением -->
+<header class="hero">
+  <div class="container hero-content">
+    <h1>СоцЗащита Волгоград</h1>
+    <p>Забота о каждом гражданине — наша основная миссия</p>
+  </div>
+</header>
+
+<!-- Информация о сайте -->
+<section id="about" class="about section">
+  <div class="container">
+    <h2>О нашем сайте</h2>
+    <p>
+      Официальный сайт Отдела социальной защиты населения Волгограда создан для того, чтобы каждый житель города мог легко получить актуальную информацию о мерах социальной поддержки, льготах, пособиях и услугах, предоставляемых государством.
+    </p>
+    <p>
+      Мы стремимся сделать процесс обращения за помощью максимально прозрачным, удобным и доступным. На нашем сайте вы найдёте подробные инструкции по оформлению документов, перечень необходимых справок, контактные данные специалистов и актуальные новости из жизни социальной сферы Волгограда.
+    </p>
+    <p>
+      Наша цель — не только информировать, но и реально помогать людям в трудной жизненной ситуации: многодетным семьям, пенсионерам, инвалидам, временно безработным и другим категориям граждан, нуждающимся в поддержке.
+    </p>
+  </div>
+</section>
+
+<!-- Преимущества -->
+<section id="benefits" class="benefits section">
+  <div class="container">
+    <h2>Наши преимущества</h2>
+    <div class="benefits-grid">
+      <div class="benefit-card">
+        <div class="icon-placeholder">
+          <!-- Иконка: документ/форма -->
+          <svg width="50" height="50" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M14 2H6C5.46957 2 4.96086 2.21071 4.58579 2.58579C4.21071 2.96086 4 3.46957 4 4V20C4 20.5304 4.21071 21.0391 4.58579 21.4142C4.96086 21.7893 5.46957 22 6 22H18C18.5304 22 19.0391 21.7893 19.4142 21.4142C19.7893 21.0391 20 20.5304 20 20V8L14 2Z" stroke="#3498db" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M14 2V8H20" stroke="#3498db" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M16 13H8" stroke="#3498db" stroke-width="2" stroke-linecap="round"/>
+            <path d="M16 17H8" stroke="#3498db" stroke-width="2" stroke-linecap="round"/>
+            <path d="M10 9H8" stroke="#3498db" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <h3>Быстрое оформление</h3>
+        <p>Минимум документов и сроков — помощь уже сегодня.</p>
+      </div>
+      <div class="benefit-card">
+        <div class="icon-placeholder">
+          <!-- Иконка: щит (безопасность) -->
+          <svg width="50" height="50" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 22C12 22 20 18 20 12V5L12 2L4 5V12C4 18 12 22 12 22Z" stroke="#2ecc71" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M9 12L11 14L15 10" stroke="#2ecc71" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <h3>Конфиденциальность</h3>
+        <p>Все ваши данные надёжно защищены.</p>
+      </div>
+      <div class="benefit-card">
+        <div class="icon-placeholder">
+            <svg width="50" height="50" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" stroke="#e74c3c" stroke-width="2"/>
+              <path d="M12 8V12L15 15" stroke="#e74c3c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+        </div>
+        <h3>Поддержка 24/7</h3>
+        <p>Консультации по телефону и онлайн в любое время.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+  <!-- Услуги -->
+<section id="services" class="services section">
+  <div class="container">
+    <h2>Предоставляемые услуги</h2>
+    <table class="services-table">
+      <thead>
+        <tr>
+          <th>Название услуги</th>
+          <th>Описание</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr id="service1">
+          <td>Ежемесячное пособие на ребёнка</td>
+          <td>Для малообеспеченных семей с детьми до 18 лет.</td>
+          <td><button class="btn-apply">Оставить заявку</button></td>
+        </tr>
+        <tr id="service2">
+          <td>Компенсация за ЖКХ</td>
+          <td>Льготы на оплату коммунальных услуг для пенсионеров и инвалидов.</td>
+          <td><button class="btn-apply">Оставить заявку</button></td>
+        </tr>
+        <tr id="service3">
+          <td>Социальное сопровождение</td>
+          <td>Помощь в решении бытовых и социальных вопросов.</td>
+          <td><button class="btn-apply">Оставить заявку</button></td>
+        </tr>
+<tr id="service4">
+  <td>Выдача продуктовых наборов</td>
+  <td>Для семей, оказавшихся в трудной жизненной ситуации.</td>
+  <td><button class="btn-apply">Оставить заявку</button></td>
+</tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+  <!-- Новости -->
+  <section id="news" class="news section">
+    <div class="container">
+      <h2>Новости</h2>
+      <div class="news-grid">
+        <div class="news-card">
+          <img src="./news1.avif" alt="Новость 1">
+          <h3>Новые правила оформления пособий</h3>
+          <p class="date">15 января 2026</p>
+          <p>С 1 февраля вступают в силу обновлённые правила подачи заявок на социальные выплаты.</p>
+        </div>
+        <div class="news-card">
+          <img src="news2.webp" alt="Новость 2">
+          <h3>Мобильный пункт помощи</h3>
+          <p class="date">10 января 2026</p>
+          <p>Теперь вы можете обратиться за помощью в передвижном офисе в вашем районе.</p>
+        </div>
+        <div class="news-card">
+          <img src="news3.avif" alt="Новость 3">
+          <h3>Горячая линия расширена</h3>
+          <p class="date">5 января 2026</p>
+          <p>Добавлены новые специалисты для ускорения ответов на звонки граждан.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Футер -->
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2025-2026 Отдел социальной защиты населения. Все права защищены.</p>
+      <p>Адрес: г. Волгоград, ул. Арсеньева, д. 8 | Телефон: +7 (495) 123-45-67</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
